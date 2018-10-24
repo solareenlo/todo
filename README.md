@@ -2,6 +2,7 @@
 ## react-native run-iosを実行して、Print: Entry, ":CFBundleIdentifier", Does Not Existが出た時は、
 - https://qiita.com/iwamatsu0430/items/ba3c5d14e4b525c80e23
 - https://qiita.com/gki/items/ad5bb0af398bfea438ff
+
 を参照のこと.
 ## react-native run-androidを実行して、こんなエラーが出たなら、
 ```
@@ -35,4 +36,6 @@ set up your Android development environment:
 https://facebook.github.io/react-native/docs/getting-started.html
 ```
 - https://github.com/facebook/react-native/issues/21916#issuecomment-432532745
+
 を参照のこと.
+android/build.gradleを修正すること.
