@@ -20,20 +20,37 @@ type Props = {};
 export default class App extends Component<Props> {
   state = {
     newTodo: '',
+    todos: [],
   }
 
   onChangeText(newTodo) {
     this.setState({ newTodo });
   }
 
+  onPressAdd() {
+    const { newTodo } = this.state;
+    this.setState({
+      // ADDボタンを押したらnewTodoの文字列を消去
+      newTodo: '',
+      // ADDボタンを押したら入力フォーラムの文字列がtodos配列に格納される
+      todos: [newTodo, ...this.state.todos],
+    })
+  }
+
   render() {
+    console.log(this.state);
     return (
       <View style={styles.container}>
         <TextInput
+          // ADDボタンを押したら入力フォーラムの文字列を消すためにある
+          value={this.state.newTodo}
           style={styles.form}
           onChangeText={text => this.onChangeText(text)}
         />
-        <TouchableOpacity style={styles.addButton}>
+        <TouchableOpacity
+          style={styles.addButton}
+          onPress={() => this.onPressAdd()}
+        >
           <Text style={styles.addButtonText}>ADD</Text>
         </TouchableOpacity>
       </View>
