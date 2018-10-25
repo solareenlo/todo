@@ -39,3 +39,13 @@ https://facebook.github.io/react-native/docs/getting-started.html
 
 を参照のこと.
 android/build.gradleを修正すること.
+
+## eslintのダウンロードは
+```
+npm install --save-dev eslint babel-eslint selint-config-airbnb eslint-plugin-import eslint-plugin-jsx-a11y eslint-plugin-React
+```
+そして、Atomの設定も行う.
+- atom -> Preference -> Install -> linter をインストール(eslint用)
+- atom -> Preference -> Install -> linter-eslint をインストール(eslint用)
+- atom -> Preference -> Install -> vim-model-plus をインストール(vimのキーバインド用)
+- atom -> Preference -> Install -> ex-mode をインストール(vimのキーバインド用)
