@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import {
   Platform,
   StyleSheet,
@@ -28,7 +28,13 @@ export default class App extends Component<Props> {
       newTodo: '',
       // ADDボタンを押したら入力フォーラムの文字列がtodos配列に格納される
       todos: [newTodo, ...this.state.todos],
-    })
+    });
+  }
+
+  onPressDelete(index) {
+    this.setState({
+      todos: this.state.todos.filter((t, i) => i !== index),
+    });
   }
 
   render() {
@@ -47,7 +53,10 @@ export default class App extends Component<Props> {
         >
           <Text style={styles.addButtonText}>ADD</Text>
         </TouchableOpacity>
-        <TodoList todos={this.state.todos}/>
+        <TodoList
+          todos={this.state.todos}
+          onPressDelete={index => this.onPressDelete(index)}
+        />
       </View>
     );
   }
