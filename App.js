@@ -12,7 +12,8 @@ import {
   StyleSheet,
   Text,
   View,
-  TextInput
+  TextInput,
+  TouchableOpacity
 } from 'react-native';
 
 type Props = {};
@@ -26,13 +27,15 @@ export default class App extends Component<Props> {
   }
 
   render() {
-    console.log(this.state);
     return (
       <View style={styles.container}>
         <TextInput
           style={styles.form}
           onChangeText={text => this.onChangeText(text)}
         />
+        <TouchableOpacity style={styles.addButton}>
+          <Text style={styles.addButtonText}>ADD</Text>
+        </TouchableOpacity>
       </View>
     );
   }
@@ -47,4 +50,15 @@ const styles = StyleSheet.create({
     backgroundColor: '#EEE',
     padding: 10,
   },
+  addButton: {
+    backgroundColor: '#333',
+    padding: 14,
+    borderRadius: 8,
+    marginTop: 10,
+  },
+  addButtonText: {
+    color: '#FFF',
+    textAlign: 'center',
+    fontWeight: 'bold',
+  }
 });
