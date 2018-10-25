@@ -42,7 +42,7 @@ android/build.gradleを修正すること.
 
 ## eslintのダウンロードは
 ```
-npm install --save-dev eslint babel-eslint eslint-config-airbnb eslint-plugin-import eslint-plugin-jsx-a11y eslint-plugin-React
+npm install --save-dev eslint babel-eslint eslint-config-airbnb eslint-plugin-import eslint-plugin-jsx-a11y eslint-plugin-react
 ```
 そして、Atomの設定も行う.
 - atom -> Preference -> Install -> linter をインストール(eslint用)
